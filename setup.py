@@ -6,7 +6,7 @@ with open('README.rst', 'r') as f:
 
 
 def get_version():
-    return re.search(r"""__version__\s+=\s+(?P<quote>['"])(?P<version>.+?)(?P=quote)""", 
+    return re.search(r"""__version__\s+=\s+(?P<quote>['"])(?P<version>.+?)(?P=quote)""",
                      open('solrcloudpy/__init__.py').read()).group('version')
 
 setup(
@@ -32,6 +32,5 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Indexing/Search'
         ],
 
-    install_requires=['requests >= 2.2.1', 'IPython >= 1.2.0', 'semver == 2.4.1'],
-    extras_require={"ip": ['IPython >= 1.2.0']}
+    install_requires=['requests >= 2.2.1', 'semver == 2.4.1']
 )
